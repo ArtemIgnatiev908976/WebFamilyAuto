@@ -12,17 +12,17 @@ public class TC_4_1 {
 
 
     //Ссылка перехода в события
-    By LinkEvent = By.xpath("//p[text()='События']");
+    By linkEvent = By.xpath("//p[text()='События']");
     //Ссылка на архив
-    By LinkArchive = By.xpath("//p[text()='Архив']");
+    By linkArchive = By.xpath("//p[text()='Архив']");
     //Карточка архива
-    By CardArchive = By.xpath("//h4[text()='2019 - 2020']/parent::div");
+    By cardArchive = By.xpath("//h4[text()='2019 - 2020']/parent::div");
     //Оценка
-    By MarkArchive = By.xpath("//p[text()='Технология']");
+    By markArchive = By.xpath("//p[text()='Технология']");
 
     public TC_4_1 typeMarkArchive() {
 
-        if(driver.findElement(MarkArchive).getText().contains("Технология")){
+        if(driver.findElement(markArchive).getText().contains("Технология")){
             System.out.println("Оценки  +++");
         }
         else System.out.println("Оценки ---");
@@ -30,16 +30,16 @@ public class TC_4_1 {
     }
 
     public TC_4_1 typeCardArchive() {
-        driver.findElement(CardArchive).click();
+        driver.findElement(cardArchive).click();
         return this;
     }
     public TC_4_1 typeLinkArchive() {
-        driver.findElement(LinkArchive).click();
+        driver.findElement(linkArchive).click();
         return this;
     }
 
     public TC_4_1 typeLinkEvent() {
-        driver.findElement(LinkEvent).click();
+        driver.findElement(linkEvent).click();
         return this;
     }
 
